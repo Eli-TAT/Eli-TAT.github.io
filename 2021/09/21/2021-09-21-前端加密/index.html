@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Eli">
+    
+    <title>
+        
+            前端加密 |
+        
+        Eli&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"https://avatars.githubusercontent.com/u/48319165?v=4","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </a>
+            
+            <a class="logo-title" href="/">
+                Eli&#39;s blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                LINKS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">LINKS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">前端加密</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Eli</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2021-09-21 17:26:49</span>
+        <span class="mobile">2021-09-21 17:26</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/">浏览器</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/">浏览器</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>总结一些前端加密的知识。</p>
+<p><strong>前端加密的意义</strong><br>和后端加密一样，前端加密的意义同样在于保护数据的安全，但是由于前端的透明性给了非法用户可乘之机，导致了前端加密的安全性不足，往往需要配合后端加密等手段，才能保证较高的安全等级。</p>
+<p><strong>前端加密方式</strong></p>
+<ul>
+<li>使用 js 将数据加密后进行传输</li>
+<li>使用 HTTPS 传输数据</li>
+<li>浏览器插件内进行数据加密后传输</li>
+</ul>
+<h3 id="1-js-加密"><a href="#1-js-加密" class="headerlink" title="1. js 加密"></a>1. js 加密</h3><p>js 对数据的加密可以通过各种加密算法实现，下面将对它们做简单的介绍。</p>
+<h4 id="（1）对称加密"><a href="#（1）对称加密" class="headerlink" title="（1）对称加密"></a>（1）对称加密</h4><p>对称加密是最简单快捷的一种加密方式，它使用同一个密钥对数据进行加密和解密。对称加密通常使用较小的密钥，一般小于 256bit，密钥的大小直接关系着加密和解密耗费的时间，因此既要考虑安全性也要考虑效率。</p>
+<ul>
+<li>优点：方便使用、速度较快；</li>
+<li>缺点：安全性不高，一旦密钥泄露，加密后的数据很容易就会被破解；</li>
+</ul>
+<p>常用的对称加密算法有和 AES 和 DES 等。</p>
+<p>登录密码等敏感信息不要仅仅在前段使用 js 进行对称加密，因为其他人一旦获取到保存在前端的密钥，可以直接对密文进行解密。对称加密的一大问题是密钥的管理与分配，即如何将密钥传送到需要的人手中，针对密钥可能被黑客获取或拦截的情况，通常做法是将对称加密的密钥进行非对称加密，然后发送给需要的一方。</p>
+<h4 id="（2）非对称加密"><a href="#（2）非对称加密" class="headerlink" title="（2）非对称加密"></a>（2）非对称加密</h4><p>非对称加密提供了一种十分安全的加密与解密的方法，他使用一对密钥（公钥和私钥）进行数据的加密和解密。其中私钥只能由一方安全保管（通常是服务端）不能泄漏，公钥则可以提供给任何人。例如前端向服务器请求公钥，服务器将公钥发送给前端后，前端通过该公钥对数据进行加密后发送给服务器，只有持有私钥的服务器才能将密文解密，从而大大提高了安全性。</p>
+<ul>
+<li>优点：安全性高，无需将密钥暴露出去。</li>
+<li>缺点：速度相较对称加密慢很多，影响效率。</li>
+</ul>
+<p>常用的非对称加密算法有和 RSA 和 DSA（数字签名）等。</p>
+<p>由于非对称加密速度较慢，所以还是应该使用对称加密传送消息，可以考虑通过非对称加密的方式发送对称加密所需的密钥，这样就可以很好的解决安全性和效率的问题。</p>
+<h4 id="（3）哈希算法"><a href="#（3）哈希算法" class="headerlink" title="（3）哈希算法"></a>（3）哈希算法</h4><p>哈希（Hash）是指将目标文本转换为具有固定长度的字符串（即消息摘要），哈希算法指的就是具有这类特性的一类算法。哈希的过程是不可逆的，且原始数据和哈希后的数据呈现多对一的映射关系，也就是说一个原始数据经过某个哈希算法处理后只有一个哈希值，但不同的原始数据可能对应着同样的哈希值。</p>
+<p>哈希算法适用于被保护数据仅用作比较验证且不需要还原成明文形式，常见的例子就是，当需要重置账户密码时，网站会给用户一个邮箱激活链接或者是一个随机的密码，而不是将原始密码发给用户，因为密码经过哈希之后是不可逆的。</p>
+<p>需要注意的是，我们不仅仅要在前端使用哈希算法，服务端也需要进行哈希，这样既能避免需要将前端发来的密文解密成明文再和数据库中的数据进行对比，也避免了数据库泄露之后密码相当于是明文存储的情况。</p>
+<p>常用的哈希算法有 MD5、SHA1 等。</p>
+<p>对于哈希算法的攻击方式主要有：寻找碰撞法和穷举法。为了保证数据的安全，可以在哈希算法的基础上做进一步的加密，常见方法有：加盐、慢哈希、密钥哈希、XOR 等。 <a class="link"   target="_blank" rel="noopener" href="https://www.jianshu.com/p/caa07eb20324" >更多相关知识可参考<i class="fas fa-external-link-alt"></i></a></p>
+<h4 id="（4）HMAC"><a href="#（4）HMAC" class="headerlink" title="（4）HMAC"></a>（4）HMAC</h4><p>HMAC 全称哈希运算消息认证码，它是一种基于 Hash 算法和密钥进行消息认证的方法，可以与任何哈希算法（MD5、SHA256 等）配合使用。它主要用于身份验证，用法如下：</p>
+<ol>
+<li>客户端发起请求（第一次请求）</li>
+<li>服务端返回随机码</li>
+<li>客户端将随机码作为密钥对登录密码进行加密，将密文发送给服务端（第二次请求）</li>
+<li>服务端从数据库中读取用户密码，用密钥进行和客户端一样的 HMAC 运算，与用户发送的结果进行比较，如果一致则验证成功，<strong>请求结束随机码失效</strong></li>
+</ol>
+<p>使用 HMAC 的好处在于，既可以加密传输数据（防止黑客直接截取 HTTP 报文），也可以防止重放（防止黑客截取登录请求报文后再次发送给服务端）。如果黑客截取第一次请求获取到了随机码，不知道密码仍然无法登录；如果被截取的是第二次请求，由于第二次请求结束随机码就会失效，即使将请求重放黑客也无法验证成功。</p>
+<h4 id="（5）结合验证码进行加密"><a href="#（5）结合验证码进行加密" class="headerlink" title="（5）结合验证码进行加密"></a>（5）结合验证码进行加密</h4><h4 id="（6）Base64-编码"><a href="#（6）Base64-编码" class="headerlink" title="（6）Base64 编码"></a>（6）Base64 编码</h4><p>Base64 是一种基于 64 个可打印字符来表示二进制数据的表示方法，常用于表示、传输、存储一些二进制数据。它只是一种通过查表的编码方法，不能用于加密。</p>
+<p>Base64 适用于小段内容的编码，比如数字证书签名、Cookie 的内容等，目前前端中 Base64 用得最多的应该就是图片转码。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// js中内置了base64的编码与解码方法</span></span><br><span class="line"><span class="comment">// 编码btoa()，解码atob()</span></span><br><span class="line"><span class="keyword">let</span> result = <span class="variable language_">window</span>.<span class="title function_">btoa</span>(<span class="string">&quot;bili!&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">window</span>.<span class="title function_">atob</span>(result));</span><br></pre></td></tr></table></figure>
+
+<h4 id="（7）数字签名"><a href="#（7）数字签名" class="headerlink" title="（7）数字签名"></a>（7）数字签名</h4><p>数字签名主要用于<strong>确认信息来自于特定的主体且信息完整未被篡改</strong>。其中数据发送方生成签名，接收方验证签名。</p>
+<h3 id="2-使用-HTTPS-传输数据"><a href="#2-使用-HTTPS-传输数据" class="headerlink" title="2. 使用 HTTPS 传输数据"></a>2. 使用 HTTPS 传输数据</h3><p>具体参考<a href="../HTTP%E5%92%8CHTTPS%E5%8C%BA%E5%88%AB/">HTTP 和 HTTPS 区别</a></p>
+<h3 id="3-浏览器插件内进行数据加密后传输"><a href="#3-浏览器插件内进行数据加密后传输" class="headerlink" title="3. 浏览器插件内进行数据加密后传输"></a>3. 浏览器插件内进行数据加密后传输</h3><p>将密钥放在浏览器插件内对数据进行加密可以防止密钥存储在前端代码中容易泄露的问题出现，由于使用不多所以不做深入讨论。</p>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/">#浏览器</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/09/21/2021-09-21-HTTP%E9%9D%A2%E8%AF%95%E9%A2%98/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">HTTP面试题</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/09/21/2021-09-21-%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">随机算法</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;Comments</i>
+    </div>
+    
+
+        
+            
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Eli</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Eli">
+    
+    <title>
+        
+            JS手写原理题 |
+        
+        Eli&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"https://avatars.githubusercontent.com/u/48319165?v=4","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </a>
+            
+            <a class="logo-title" href="/">
+                Eli&#39;s blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                LINKS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">LINKS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">JS手写原理题</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Eli</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2021-06-06 13:55:27</span>
+        <span class="mobile">2021-06-06 13:55</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E6%89%8B%E5%86%99%E9%A2%98/">手写题</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%89%8B%E5%86%99%E9%A2%98/">手写题</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <blockquote>
+<p>汇总一些 JS 手写题，偏向于理解原理后实现某些 JS 内置 API。</p>
+</blockquote>
+<h2 id="1-手写一个-new-运算符"><a href="#1-手写一个-new-运算符" class="headerlink" title="1.手写一个 new 运算符"></a>1.手写一个 new 运算符</h2><p><strong>new 的过程：</strong></p>
+<ol>
+<li>创建一个空对象；</li>
+<li>空对象的<strong>proto</strong>属性（IE 没有该属性）指向构造函数的原型对象 prototype（链接原型）；</li>
+<li>构造函数的 this 指向空对象（绑定 this）；</li>
+<li>执行构造函数中的代码，为空对象添加属性、方法；</li>
+<li>若构造函数返回一个基本类型，那么返回创建的空对象；若构造函数返回一个引用类型，返回值将覆盖之前创建的空对象；</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">_new</span>(<span class="params">fn, ...args</span>) &#123;</span><br><span class="line">  <span class="comment">// const obj  = &#123;&#125; // 创建一个空对象</span></span><br><span class="line">  <span class="comment">// obj.__proto__ = fn.prototype;  // 链接原型</span></span><br><span class="line">  <span class="keyword">const</span> obj = <span class="title class_">Object</span>.<span class="title function_">create</span>(fn.<span class="property"><span class="keyword">prototype</span></span>); <span class="comment">// 一行代码实现前两步</span></span><br><span class="line">  <span class="keyword">let</span> res = fn.<span class="title function_">call</span>(obj, ...args); <span class="comment">// 绑定this</span></span><br><span class="line">  <span class="comment">// 判断返回值</span></span><br><span class="line">  <span class="keyword">return</span> res <span class="keyword">instanceof</span> <span class="title class_">Object</span> ? res : obj;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 构造函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Bird</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">say</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">const</span> bird = <span class="title function_">_new</span>(<span class="title class_">Bird</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(bird);</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-实现-instanceof-运算符"><a href="#2-实现-instanceof-运算符" class="headerlink" title="2. 实现 instanceof 运算符"></a>2. 实现 instanceof 运算符</h2><p>instanceof 运算符用于检验构造函数的 prototype 是否出现在某个对象的原型链上，从而可以判断对象的类型。根据原型链，原型之上可能还存在原型，因此实现的关键在于还要上溯原型链。</p>
+<blockquote>
+<p><code>isPrototypeof()</code>与<code>instanceof</code>的区别在于，它用于测试一个对象是否存在于另一个对象的原型链上。<a class="link"   target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf" >用法参考<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myInstanceof</span>(<span class="params">left, right</span>) &#123;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (left === <span class="literal">null</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="title class_">Object</span>.<span class="title function_">getPrototypeOf</span>(left) === right.<span class="property"><span class="keyword">prototype</span></span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 原型链上溯，直到left的prototype出现在right的原型链上，或者直到left到达原型链的顶端null</span></span><br><span class="line">    left = <span class="title class_">Object</span>.<span class="title function_">getPrototypeOf</span>(left); <span class="comment">// __proto__已从web标准中移除，推荐只使用Object.getPrototypeOf()</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myInstanceof</span>(<span class="params">left, right</span>) &#123;</span><br><span class="line">  <span class="keyword">while</span> (left !== <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (left.<span class="property">__proto__</span> === right.<span class="property"><span class="keyword">prototype</span></span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    left = left.<span class="property">__proto__</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">let</span> arr = [];</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Bird</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line"><span class="keyword">let</span> bird = <span class="keyword">new</span> <span class="title class_">Bird</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">myInstanceof</span>(arr, <span class="title class_">Array</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">myInstanceof</span>(arr, <span class="title class_">Object</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">myInstanceof</span>(bird, <span class="title class_">Bird</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">myInstanceof</span>(arr, <span class="title class_">String</span>)); <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-手写-call、apply、bind"><a href="#3-手写-call、apply、bind" class="headerlink" title="3. 手写 call、apply、bind"></a>3. 手写 call、apply、bind</h2><ul>
+<li>call()实现</li>
+</ul>
+<p>简单来说，我们需要在 Function 的原型上添加一个 call 方法，这个方法要能够为调用 call 的函数实例指定 this，并能传递参数，最后执行函数。解决方法就是，将调用 call 的函数传入指定的函数上下文，执行函数并返回结果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Function</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">myCall</span> = <span class="keyword">function</span> (<span class="params">context, ...args</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (context === <span class="literal">null</span> || context === <span class="literal">undefined</span>) &#123;</span><br><span class="line">    context = <span class="variable language_">window</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 创建唯一的key值，作为构造的context内部方法名</span></span><br><span class="line">  <span class="keyword">const</span> fn = <span class="title class_">Symbol</span>();</span><br><span class="line">  context[fn] = <span class="variable language_">this</span>; <span class="comment">// this指向调用call的函数，相当于将函数传入了context中</span></span><br><span class="line">  <span class="keyword">return</span> context[fn](...args);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">say</span>(<span class="params">name, age</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`name：<span class="subst">$&#123;name&#125;</span>`</span>);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`age：<span class="subst">$&#123;age&#125;</span>`</span>);</span><br><span class="line">&#125;</span><br><span class="line">say.<span class="title function_">myCall</span>(<span class="literal">null</span>, <span class="string">&quot;bird&quot;</span>, <span class="number">18</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>apply()实现</li>
+</ul>
+<p>apply()与 call()唯一的区别在于传递参数的形式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Function</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">myApply</span> = <span class="keyword">function</span> (<span class="params">context, args</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (context === <span class="literal">null</span> || context === <span class="literal">undefined</span>) &#123;</span><br><span class="line">    context = <span class="variable language_">window</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> fn = <span class="title class_">Symbol</span>();</span><br><span class="line">  context[fn] = <span class="variable language_">this</span>;</span><br><span class="line">  <span class="keyword">return</span> context[fn](...args);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">say</span>(<span class="params">name, age</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`name：<span class="subst">$&#123;name&#125;</span>`</span>);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`age：<span class="subst">$&#123;age&#125;</span>`</span>);</span><br><span class="line">&#125;</span><br><span class="line">say.<span class="title function_">myApply</span>(<span class="literal">null</span>, [<span class="string">&quot;bird&quot;</span>, <span class="number">18</span>]);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>bind()实现</li>
+</ul>
+<p>bind()返回一个函数的拷贝，并能设置 this 值和初始参数。由于 bind 要考虑两种情况（返回普通函数或构造函数），而且还要涉及到参数合并，因此实现要复杂一些。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Function</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">myBind</span> = <span class="keyword">function</span> (<span class="params">context, args</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (context === <span class="literal">null</span> || context === <span class="literal">undefined</span>) &#123;</span><br><span class="line">    context = <span class="variable language_">window</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> fn = <span class="title class_">Symbol</span>();</span><br><span class="line">  context[fn] = <span class="variable language_">this</span>; <span class="comment">// this指向调用bind的函数</span></span><br><span class="line">  <span class="keyword">let</span> _this = <span class="variable language_">this</span>;</span><br><span class="line">  <span class="comment">// bind返回一个函数</span></span><br><span class="line">  <span class="keyword">const</span> result = <span class="keyword">function</span> (<span class="params">...innerArgs</span>) &#123;</span><br><span class="line">    <span class="comment">// 第一种情况 : bind 生成的是构造函数</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span> <span class="keyword">instanceof</span> _this) &#123;</span><br><span class="line">      <span class="comment">// 使用new运算符调用result，此时 this 指向对象实例</span></span><br><span class="line">      <span class="variable language_">this</span>[fn] = _this;</span><br><span class="line">      <span class="variable language_">this</span>[fn](...args, ...innerArgs);</span><br><span class="line">      <span class="keyword">delete</span> <span class="variable language_">this</span>[fn]; <span class="comment">// 手动清除引用，防止闭包中的变量常驻内存</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 第二种情况 : bind 生成的是普通函数</span></span><br><span class="line">      context[fn](...args, ...innerArgs); <span class="comment">// 将this绑定到指定上下文，执行函数</span></span><br><span class="line">      <span class="keyword">delete</span> context[fn];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">// 如果生成的是构造函数，构造函数还需从调用bind的函数那里继承原型</span></span><br><span class="line">  result.<span class="property"><span class="keyword">prototype</span></span> = <span class="title class_">Object</span>.<span class="title function_">create</span>(<span class="variable language_">this</span>.<span class="property"><span class="keyword">prototype</span></span>);</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-手写一个简易-Promise，Promise-all，Promise-race"><a href="#4-手写一个简易-Promise，Promise-all，Promise-race" class="headerlink" title="4. 手写一个简易 Promise，Promise.all，Promise.race"></a>4. 手写一个简易 Promise，Promise.all，Promise.race</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-Object-is-实现"><a href="#5-Object-is-实现" class="headerlink" title="5. Object.is()实现"></a>5. Object.is()实现</h2><p>Object.is()方法用于判断两个值是否相等，并且比较时不会对两者进行类型转换，与<code>===</code>全等运算符十分相似，但它们之间还是存在一些区别</p>
+<ul>
+<li>NaN 在&#x3D;&#x3D;&#x3D;中是不相等的，而在 Object.is 中是相等的;</li>
+<li>+0 和-0 在&#x3D;&#x3D;&#x3D;中是相等的，而在 Object.is 中是不相等的;</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="property">_is</span> = <span class="keyword">function</span> (<span class="params">x, y</span>) &#123;</span><br><span class="line">  <span class="comment">// x===y时只需对+0和-0进行比较</span></span><br><span class="line">  <span class="keyword">if</span> (x === y) &#123;</span><br><span class="line">    <span class="comment">// x非0直接返回true，将+0和-0的比较转换为+Infinity和-Infinity的比较</span></span><br><span class="line">    <span class="keyword">return</span> x !== <span class="number">0</span> || <span class="number">1</span> / x === <span class="number">1</span> / y;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// x!==y时只剩下NaN需要进行比较</span></span><br><span class="line">  <span class="comment">// x!==x说明x为NaN，同理y也一样，当x和y都为NaN时返回true</span></span><br><span class="line">  <span class="keyword">return</span> x !== x &amp;&amp; y !== y;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-Object-create-实现"><a href="#6-Object-create-实现" class="headerlink" title="6. Object.create()实现"></a>6. Object.create()实现</h2><p>Object.create()方法用于创建一个对象，并可以为其指定原型和属性，其中<code>Object.create(null)</code>创建的对象既没有属性也没有原型。<a class="link"   target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create" >用法参考<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">_create</span>(<span class="params">proto, propertiesObject = <span class="literal">undefined</span></span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (!(proto <span class="keyword">instanceof</span> <span class="title class_">Object</span>) &amp;&amp; proto !== <span class="literal">null</span>) <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">// 链接原型，实例化一个空对象</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">F</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line">  F.<span class="property"><span class="keyword">prototype</span></span> = proto;</span><br><span class="line">  <span class="keyword">const</span> obj = <span class="keyword">new</span> <span class="title function_">F</span>();</span><br><span class="line">  <span class="comment">// 添加属性</span></span><br><span class="line">  <span class="keyword">if</span> (propertiesObject !== <span class="literal">undefined</span>) &#123;</span><br><span class="line">    <span class="title class_">Object</span>.<span class="title function_">defineProperties</span>(obj, propertiesObject);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> obj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-用-setTimeout-模拟实现-setInterval"><a href="#7-用-setTimeout-模拟实现-setInterval" class="headerlink" title="7. 用 setTimeout 模拟实现 setInterval"></a>7. 用 setTimeout 模拟实现 setInterval</h2><p><strong>为什么要用 setTimeout 模拟实现 setInterval？</strong><br>根据事件循环的知识，setInterval 定时器 属于宏任务，它设置的延迟时间并不是回调执行的时间间隔，而是回调进入任务队列的事件间隔，可能存在以下情况：<br>1）前面的任务较多或者执行时间较长，导致定时器的回调还在执行过程中，下一个回调紧接着进入了任务队列，这样就会造成定时器执行间隔不准确的问题；<br>2）亦或是浏览器准备将下一个回调推入队列，但前一个定时器的回调还处在队列中，新的回调不会被添加，而是直接跳过，这样就会造成丢帧的情况出现；</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316213418259.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0haX19fWkg=,size_16,color_FFFFFF,t_70"></p>
+<p>因此考虑使用 setTimeout 来模拟实现 setInterval（可以完美解决以上两个问题）：<br>1）setTimeout 在前一个定时器执行完前，不会向队列中推入新的定时器；<br>2）保证定时器执行间隔；</p>
+<ul>
+<li>setTimeout 模拟实现 setInterval</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">mySetInterval</span>(<span class="params">fn, delay</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> timer = <span class="literal">null</span>;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">interval</span>(<span class="params"></span>) &#123;</span><br><span class="line">    timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="title function_">fn</span>();</span><br><span class="line">      <span class="title function_">interval</span>();</span><br><span class="line">    &#125;, delay); <span class="comment">// 递归调用setTimeout，以实现setInterval的效果</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">interval</span>();</span><br><span class="line">  <span class="comment">// 添加清除定时器方法</span></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">clear</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="title function_">mySetInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">111</span>);</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  a.<span class="title function_">clear</span>();</span><br><span class="line">&#125;, <span class="number">2500</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>反过来也可以使用 setInterval 模拟实现 setTimeout</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">mySetTimeout</span>(<span class="params">fn, delay</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> timer = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">fn</span>();</span><br><span class="line">    <span class="built_in">clearInterval</span>(timer);</span><br><span class="line">  &#125;, delay);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="title function_">mySetTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">222</span>);</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-实现一个简单的-forEach-迭代器"><a href="#8-实现一个简单的-forEach-迭代器" class="headerlink" title="8. 实现一个简单的 forEach 迭代器"></a>8. 实现一个简单的 forEach 迭代器</h2><p><strong>思路</strong></p>
+<ol>
+<li>遍历可迭代对象(Array,String,Map,Set 等)的元素，对每个元素执行回调函数</li>
+<li>将每个元素设置为回调函数的上下文</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">forEach</span>(<span class="params">list, callback</span>) &#123;</span><br><span class="line">  <span class="comment">// 异常处理</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; list.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    callback.<span class="title function_">call</span>(list[i], i, list[i]); <span class="comment">// call()的第一个参数用于指定函数上下文，后面的参数列表全部传递给回调函数</span></span><br><span class="line">    <span class="comment">// callback.apply(list,[i, list[i]]) // apply()的第二个参数数组用于传参给回调函数</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="title function_">forEach</span>(arr, <span class="function">(<span class="params">index, value</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(index + <span class="string">&quot;：&quot;</span> + value);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%89%8B%E5%86%99%E9%A2%98/">#手写题</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/06/07/2021-06-07-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">正则表达式相关问题</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/06/05/2021-06-05-this%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">this指向问题</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;Comments</i>
+    </div>
+    
+
+        
+            
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Eli</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
+</body>
+</html>

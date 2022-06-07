@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Eli">
+    
+    <title>
+        
+            JS面试题 |
+        
+        Eli&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"https://avatars.githubusercontent.com/u/48319165?v=4","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </a>
+            
+            <a class="logo-title" href="/">
+                Eli&#39;s blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                LINKS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">LINKS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">JS面试题</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Eli</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2021-06-20 16:28:53</span>
+        <span class="mobile">2021-06-20 16:28</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/JS/">JS</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/JS/">JS</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <meta name="referrer" content="no-referrer"/>
+
+<p>汇总一些 JS 面试题</p>
+<h2 id="1-var、let、const-的区别"><a href="#1-var、let、const-的区别" class="headerlink" title="1. var、let、const 的区别"></a>1. var、let、const 的区别</h2><ol>
+<li>作用域范围<ul>
+<li>var 声明的变量属于函数级作用域；</li>
+<li>let、const 关键字声明的变量属于块级作用域；<br>块级作用域解决了两个问题：一是内部变量可能覆盖外部变量，二是 for 循环中的计数变量能被外部访问。</li>
+</ul>
+</li>
+</ol>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(i); <span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) &#123;&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(j); <span class="comment">// j is not defined</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>变量提升</li>
+</ol>
+<ul>
+<li>var 声明的变量在程序执行时会被自动提升到函数作用域的顶部；</li>
+<li>let 和 const 声明的变量则不会在作用域中被提升；<br>变量提升表现如下：</li>
+</ul>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">func1</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>, <span class="title function_">log</span>(bird);</span><br><span class="line">  <span class="keyword">var</span> bird = <span class="string">&quot;birdddddd&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">func1</span>();</span><br><span class="line"><span class="comment">/*等价于*/</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">func2</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> bird;</span><br><span class="line">  <span class="variable language_">console</span>, <span class="title function_">log</span>(bird);</span><br><span class="line">  bird = <span class="string">&quot;birdddddd&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">func2</span>();</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>暂时性死区</li>
+</ol>
+<ul>
+<li>在使用 let、const 声明变量之前，该变量都是不可用的，这在语法上称为暂时性死区；</li>
+<li>由于变量提升的存在，所以 var 声明的变量不存在暂时性死区；</li>
+</ul>
+<ol start="4">
+<li><p>全局属性<br>浏览器的全局对象是 window，Node 的全局对象是 global。var 声明的变量是全局变量，而且会成为 window 对象的属性，let 和 const 声明的变量则不会。</p>
+</li>
+<li><p>重复声明</p>
+</li>
+</ol>
+<ul>
+<li>var 可以在同一作用域内重复声明同一个变量，后面的声明会覆盖前面的；</li>
+<li>const、let 则不能在同一块级作用域内重复声明同一个变量；</li>
+</ul>
+<ol start="6">
+<li><p>初始值设置<br> const 声明的变量必须进行初始化，否则会报错；<br> let、var 声明的变量可以不初始化，为 undefined 未定义；</p>
+</li>
+<li><p>值能否修改<br>var 和 let 声明的变量的值可以修改，而 const 声明的变量的值是不可修改的。而对于 const 声明的引用类型，虽然不能再将变量的指向修改，但可以修改引用类型内部的结构。原因如下：</p>
+</li>
+</ol>
+<p>  javascrit 中有两种内存结构，栈内存和堆内存，前者大小固定，用于存储各种基本类型的变量，以及引用类型的指针；后者则是一块大小不固定的内存空间，用于存储引用类型等复杂结构，为引用类型声明的变量实际上存储的是指向某块堆内存的指针。<br>  <img src="https://images2018.cnblogs.com/blog/461976/201808/461976-20180823211511434-1707579794.png"></p>
+<p>  <strong>注意事项</strong></p>
+<ul>
+<li>let 和 const 的出现解决了块级作用域的问题，以后应尽量避免使用 var；</li>
+<li>在非严格模式下未用关键字声明的变量将变为全局变量，在严格模式下会报错；</li>
+<li>需要一次声明多个变量，在一条语句中用逗号分隔即可，如<code>let a=1，b=2</code>；</li>
+</ul>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a, b;</span><br><span class="line"><span class="keyword">var</span> c, d;</span><br><span class="line">(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> a = (b = <span class="number">3</span>); <span class="comment">// 相当于var a=b;b = 3;其中b为全局变量</span></span><br><span class="line">  <span class="keyword">var</span> c,</span><br><span class="line">    d = <span class="number">3</span>; <span class="comment">// 相当于var c;var d = 3;</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;内部&quot;</span>);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a=&quot;</span> + a);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;b=&quot;</span> + b);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;c=&quot;</span> + c);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;d=&quot;</span> + d);</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;外部&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a=&quot;</span> + a);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;b=&quot;</span> + b);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;c=&quot;</span> + c);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;d=&quot;</span> + d);</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-null-和-undefined-的区别"><a href="#2-null-和-undefined-的区别" class="headerlink" title="2. null 和 undefined 的区别"></a>2. null 和 undefined 的区别</h2><ul>
+<li>null 表示一个变量被定义了，定义为空值 null；</li>
+<li>undefined 表示变量不存在定义，或者是被声明了但没有进行初始化；</li>
+</ul>
+<p>因此设置一个值为 null 是合理的，但设置一个值为 undefined 是不合理的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">objA.<span class="property">valueA</span> = <span class="literal">null</span>;</span><br><span class="line">objA.<span class="property">valueA</span> = <span class="literal">undefined</span>；<span class="comment">// 应该直接使用 delete objA.valueA，任何一个存在引用的变量值为undefined都是一件错误的事情</span></span><br></pre></td></tr></table></figure>
+
+<p>判断一个值是否存在就可以使用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">objA.<span class="property">valueA</span> === <span class="literal">undefined</span>; <span class="comment">// 不应使用 null 因为 undefined == null，而 null 表示该值定义为空值</span></span><br></pre></td></tr></table></figure>
+
+<p>在 JSON 规范中就不允许存在 undefined 类型，但存在表示空值的 null 。在一些使用广泛的库（如 jQuery）中的深度拷贝函数会忽略 undefined 而不会忽略 null ，也是针对上述语义的理解。</p>
+<p><strong>JS 中同时存在 undefined 和 null 是合理的</strong></p>
+<blockquote>
+<p>在 Java 中不存在 undefined 是合理的：Java 是一门静态类型语言，不可能存在一个未定义的成员（不存在的话直接就编译失败了），所以只用 null 来表示语义上的空值。而 JavaScript 作为一门动态类型语言，成员除了可能表现为空值外，还有可能根本就不存在（是否存在只在运行期才知道），所以就需要一个值来表示对某成员的 getter 是取不到值的。至于 dart 不存在 null, 可能是 dart 像 java 一样是一个静态类型语言（或者说是一个有编译期静态类型检查的语言，在运行期并不进行类型检查），所以不需要设置一个 undefined 这样的类型。</p>
+</blockquote>
+<p><strong>typeof null &#x3D;&#x3D;&#x3D; “object” 不代表 null 是空对象</strong></p>
+<blockquote>
+<p>不能因为 typeof null &#x3D;&#x3D;&#x3D; “object” 而认为 null 代表空对象，简单的反例：在强类型数据交换协议 odata（<a class="link"   target="_blank" rel="noopener" href="http://www.odata.org/%EF%BC%89%E7%9A%84" >http://www.odata.org/）的<i class="fas fa-external-link-alt"></i></a> JSON 格式中，即使一个成员已经定义为特定类型（比如 string），也可以设置其值为 null 来表示这个值是空值。而 typeof null &#x3D;&#x3D;&#x3D; “object” 像是一个设计失误，所以在 harmony 中有提议将这个返回值修正为 null :<a class="link"   target="_blank" rel="noopener" href="http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null%E3%80%82%E4%BD%86%E6%98%AF%E7%94%B1%E4%BA%8E%E8%AF%A5%E6%8F%90%E8%AE%AE%E4%BC%9A%E9%80%A0%E6%88%90%E5%A4%A7%E9%87%8F%E6%97%A7" >http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null。但是由于该提议会造成大量旧<i class="fas fa-external-link-alt"></i></a> Javascript 脚本出现问题，因此就被否决了。</p>
+</blockquote>
+<h2 id="3-将类数组结构转化为数组"><a href="#3-将类数组结构转化为数组" class="headerlink" title="3. 将类数组结构转化为数组"></a>3. 将类数组结构转化为数组</h2><p>类数组结构（例如 arguments 对象）拥有 length 属性 ，可以使用下标访问元素，但是不能使用数组方法，如何把类数组转化为数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arrayLike=<span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;div&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1.展开运算符</span></span><br><span class="line">[...arrayLike]</span><br><span class="line"><span class="comment">// 2.Array.from，用于将类数组结构转换为数组实例</span></span><br><span class="line"><span class="title class_">Array</span>.<span class="title function_">from</span>(arrayLike)</span><br><span class="line"><span class="comment">// 3.Array.prototype.slice</span></span><br><span class="line"><span class="title class_">Array</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">slice</span>.<span class="title function_">call</span>(arrayLike)</span><br><span class="line"><span class="comment">// 4.Array.apply，相当于Array(...arrayLike)</span></span><br><span class="line"><span class="title class_">Array</span>.<span class="title function_">apply</span>(<span class="literal">null</span>, arrayLike)</span><br><span class="line"><span class="comment">// 5.Array.prototype.concat</span></span><br><span class="line"><span class="title class_">Array</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">concat</span>.<span class="title function_">apply</span>([], arrayLike)</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-for…in-和-for…of-两种遍历方式的区别"><a href="#4-for…in-和-for…of-两种遍历方式的区别" class="headerlink" title="4. for…in 和 for…of 两种遍历方式的区别"></a>4. for…in 和 for…of 两种遍历方式的区别</h2><ul>
+<li>for…in</li>
+</ul>
+<p>一般用于对象的遍历，它以任意顺序遍历一个对象的<strong>属性名</strong>。但不推荐用来遍历数组，Array 作为 js 内置对象，虽然能够通过下标访问其中的元素，但它本质上还是一个对象，使用 for…in 可能会造成意想不到的问题。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>];</span><br><span class="line">arr.<span class="property">name</span> = <span class="string">&quot;bird&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">// [ &#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;, name: &#x27;bird&#x27; ]</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> arr) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(i); <span class="comment">// &#x27;0&#x27;, &#x27;1&#x27;, &#x27;2&#x27;, &#x27;name&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>for…in 会遍历数组对象中所有的属性，甚至是原本不属于这个数组对象的属性，为了避免这一问题，推荐使用 for…of 或者 forEach 进行数组遍历。</p>
+<ul>
+<li>for…of</li>
+</ul>
+<p>用于遍历可迭代对象（即具有 iterator 接口的对象，如Array，Map，Set，String，TypedArray，arguments 对象等），它按照索引顺序遍历一个可迭代对象的<strong>属性值</strong>，并且只遍历可迭代对象本身具有的属性。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>];</span><br><span class="line">arr.<span class="property">name</span> = <span class="string">&quot;bird&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">// [ &#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;, name: &#x27;bird&#x27; ]</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(i); <span class="comment">// &#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;,</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-如何使用-for-of-遍历对象"><a href="#5-如何使用-for-of-遍历对象" class="headerlink" title="5. 如何使用 for..of 遍历对象"></a>5. 如何使用 for..of 遍历对象</h2><p>for…of 允许遍历一个含有 iterator 接口的数据结构（数组、对象等）并且返回各项的值，普通的对象用 for..of 遍历会报错。</p>
+<ol>
+<li>遍历类数组对象<br>将类数组对象转化数组，再使用 for..of 遍历即可。</li>
+</ol>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  <span class="number">0</span>: <span class="string">&quot;one&quot;</span>,</span><br><span class="line">  <span class="number">1</span>: <span class="string">&quot;two&quot;</span>,</span><br><span class="line">&#125;;</span><br><span class="line">obj = <span class="title class_">Array</span>.<span class="title function_">from</span>(obj);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">of</span> obj) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>遍历非类数组对象<br>只需要给对象添加一个[Symbol.iterator]特性，并指向一个迭代器即可。</li>
+</ol>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">b</span>: <span class="number">2</span>,</span><br><span class="line">&#125;;</span><br><span class="line">obj[<span class="title class_">Symbol</span>.<span class="property">iterator</span>] = <span class="keyword">function</span>* () &#123;</span><br><span class="line">  <span class="keyword">var</span> keys = <span class="title class_">Object</span>.<span class="title function_">keys</span>(obj);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">of</span> keys) &#123;</span><br><span class="line">    <span class="keyword">yield</span> [k, obj[k]];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> [k, v] <span class="keyword">of</span> obj) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(k, v);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-requestAnimationFrame"><a href="#6-requestAnimationFrame" class="headerlink" title="6. requestAnimationFrame()"></a>6. requestAnimationFrame()</h2><p>window.requestAnimationFrame()跟 setTimeout()类似，都用于推迟某个函数的执行，它无需指定延迟时间，一般用于操作动画。它接收一个函数作为回调，在浏览器下一次重绘之前执行回调函数来更新动画，这样能避免因动画频繁更新引发重绘造成帧率过高导致的性能问题。</p>
+<p><strong>刷新率和帧率</strong></p>
+<ul>
+<li><p>刷新率<br>刷新率又叫屏幕刷新率，是指显示设备一秒钟刷新图像的次数，单位为 HZ。60HZ 刷新率表示屏幕一秒钟刷新 60 次图像，也就是一秒钟最多能显示 60 帧图像。</p>
+</li>
+<li><p>帧率<br>帧率是指显示设备一秒钟展示的帧数，单位为 FPS。只有刷新率大于等于帧数时，显示设备才能显示出所有的帧。</p>
+</li>
+</ul>
+<p>一般浏览器帧率在 60FPS，也就是大约每 16.67ms 重绘一次，这意味着<code>requestAnimationFrame()</code>传递的回调函数通常每秒执行 60 次，但在遵循 W3C 标准的浏览器中，回调函数的执行次数一般与浏览器屏幕刷新次数相匹配。为了提高性能和电池寿命，在大多数浏览器里当 requestAnimationFrame() 运行在后台 Tab 标签页或者隐藏的 iframe 里时，会被暂停调用。</p>
+<p><strong>用法</strong><br>回调函数 callback 有一个 <code>DOMHighResTimeStamp</code> 参数，该参数与 performance.now()的返回值相同，表示 requestAnimationFrame() 开始执行回调函数的时刻。<br>requestAnimationFrame() 返回一个 <code>long</code> 整数，类似于给 setTimeout 加的标识，可传递给 window.cancelAnimationFrame()以取消回调函数。</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame" >requestAnimationFrame 用法<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用let关键字，每次循环都会生成一个独立的块级作用域</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">  <span class="title function_">requestAnimationFrame</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 可以看到 requestAnimationFrame()的回调函数被异步执行了</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(performance.<span class="title function_">now</span>());</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-setTimeout-和-setInterval"><a href="#7-setTimeout-和-setInterval" class="headerlink" title="7. setTimeout 和 setInterval"></a>7. setTimeout 和 setInterval</h2><p>根据事件循化机制的相关知识，延迟队列中 setTimeout 和 setInterval 的回调函数要等到任务队列中的任务执行完毕后才会执行，因此定时器的延迟时间是不准确的。</p>
+<p><strong>setTimeout</strong></p>
+<ul>
+<li><p>未激活的页面 setTimeout 执行的最小时间间隔为 1000 毫秒<br>处于后台运行状态的 tab 页，setTimeout 执行的最小时间间隔为 1000 毫秒，这样做是为了节约性能以及延长电池使用寿命。</p>
+</li>
+<li><p>延迟执行时间有最大值<br>Chrome、Safari、Firefox 都是以 32 bit 来存储延迟时间的，32bit 能表示的最大数为 2147483647，这意味着 setTimeout 设置的延迟时间大于 2147483647 毫秒（约 24.8 天）时就会溢出，相当于延时值被设置为 0 ，这时定时器会被立即执行。</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> timeId = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;超出限制&quot;</span>);</span><br><span class="line">&#125;, <span class="number">2147483648</span>); <span class="comment">//超过最大值，调用执行</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>setTimeout 存在嵌套调用时系统会设置最短时间间隔为 4 毫秒<br>在 Chrome 中，定时器被嵌套调用 5 次以上，系统会判断该定时器被阻塞了，此时的时间间隔最小为 4 毫秒。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">cb</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(cb, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">setTimeout</span>(cb, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>setInterval</strong></p>
+<ul>
+<li>未激活的页面 setInterval 执行的最小时间间隔也为 1000 毫秒</li>
+<li>延迟执行时间也有最大值，和 setTimeout 一致</li>
+</ul>
+<p>有兴趣可以看一看<a class="link"   target="_blank" rel="noopener" href="https://www.freesion.com/article/4965770304/" >你可能不知道的 5 个 SETTIMEOUT 冷知识<i class="fas fa-external-link-alt"></i></a></p>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/JS/">#JS</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/06/20/2021-06-20-CDN%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">CDN工作原理</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/06/11/2021-06-11-JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD%E6%96%B9%E5%BC%8F/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">JS数据类型判断方式</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;Comments</i>
+    </div>
+    
+
+        
+            
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Eli</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
+</body>
+</html>

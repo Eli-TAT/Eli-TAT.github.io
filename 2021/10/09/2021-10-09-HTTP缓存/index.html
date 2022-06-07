@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Eli">
+    
+    <title>
+        
+            HTTP缓存 |
+        
+        Eli&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"https://avatars.githubusercontent.com/u/48319165?v=4","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </a>
+            
+            <a class="logo-title" href="/">
+                Eli&#39;s blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                LINKS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">LINKS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">HTTP缓存</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Eli</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2021-10-09 16:34:23</span>
+        <span class="mobile">2021-10-09 16:34</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/">浏览器</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/HTTP%E7%BC%93%E5%AD%98/">HTTP缓存</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <meta name="referrer" content="no-referrer"/>
+
+
+
+<p>HTTP 缓存策略分为两种，强缓存和协商缓存，它们通过设置 HTTP 报文头部的字段来实现。</p>
+<ol>
+<li><p>强缓存<br>强缓存指的是在规定的有效期内，浏览器会直接使用资源的缓存副本，不再向服务器发起新的请求。强缓存可以通过两种方式来实现：</p>
+<p> <strong>（1） Expires</strong><br> <code>Expires</code>是 HTTP&#x2F;1.0 中的属性，用来设置资源的过期时间。服务器通过<strong>在响应头中添加 Expires 属性</strong>，来指定资源的过期时间。在过期时间以内，该资源可以被缓存使用，不必再向服务器发送请求。<strong>要注意的是</strong>，这个时间是服务器的时间，是一个绝对时间，因此可能存在客户端时间和服务器端时间不一致的情况，而且用户还可以对客户端时间进行修改，这样就可能会影响缓存命中的结果。</p>
+<p> <strong>（2） Cache-Control</strong><br> <code>Cache-Control</code> 相比<code>Expires</code>能更加精确地控制资源的缓存，是 HTTP&#x2F;1.1 中的属性，它提供了许多取值：</p>
+<ul>
+<li>public：设置了该字段值的资源表示可以被任何对象（包括：发送请求的客户端、代理服务器等等）缓存。这个字段值不常用，一般还是使用 max-age&#x3D;来精确控制；</li>
+<li>private：设置了该字段值的资源只能被用户浏览器缓存，不允许任何代理服务器缓存。在实际开发当中，对于一些含有用户信息的 HTML，通常都要设置这个字段值，避免代理服务器(CDN)缓存；</li>
+<li>no-cache：设置了该字段<strong>需要先和服务端确认返回的资源是否发生了变化</strong>，如果资源未发生变化，则直接使用缓存的资源；</li>
+<li>no-store：设置了该字段表示禁止任何缓存，即每次都会向服务端发起新的请求，拉取最新的资源；</li>
+<li>max-age&#x3D;：设置缓存的最大有效期，单位为秒；</li>
+<li>s-maxage&#x3D;：优先级高于 max-age&#x3D;，仅适用于共享缓存(CDN)，优先级高于 max-age 和 Expires；</li>
+<li>max-stale[&#x3D;]：设置该字段表明客户端愿意接收已经过期的资源，但是不能超过给定的时间限制。</li>
+</ul>
+<p> 一般来说只需要设置其中一种方式就可以实现强缓存策略，当两种方式一起使用时，Cache-Control 的优先级要高于 Expires。</p>
+<p> <strong>no-cache 和 no-store 的区分</strong></p>
+<ul>
+<li>no-cache 是指先要和服务器确认是否有资源更新，再进行判断。也就是说没有强缓存，但是会有协商缓存；</li>
+<li>no-store 是指不使用任何缓存，每次请求都直接从服务器获取资源。</li>
+</ul>
+</li>
+<li><p>协商缓存<br>如果命中强制缓存，无需再发起新的请求，直接使用缓存内容，如果没有命中强制缓存，并设置了协商缓存，这个时候协商缓存就会发挥作用。</p>
+<p> 使用协商缓存策略时，浏览器会向服务器发送一个预请求，如果资源没有发生修改，则返回 304 状态码，直接使用本地的缓存副本。如果资源发生了改变，则返回更新后的资源。协商缓存也可以通过两种方式来设置：分别是 http 头信息中的 Etag 和 Last-Modified 属性。</p>
+<p> <strong>（1） Last-Modified</strong><br> 服务器通过在响应头中添加 Last-Modified 属性来指出资源最后一次修改的时间，当浏览器下一次发起请求时，会在请求头中添加一个 <code>If-Modified-Since</code> 的属性，属性值为上一次资源返回时的 Last-Modified 的值。当请求发送到服务器后服务器会通过这个属性来和资源的最后一次的修改时间来进行比较，以此来判断资源是否做了修改。如果资源没有修改，那么返回 304 状态，让客户端使用本地的缓存。如果资源已经被修改了，则返回修改后的资源。<br> 这种方式的缺点在于 Last-Modified 标注的时间只能精确到秒级，如果某些文件在 1 秒钟内被修改多次的话，那么文件已经改变了但是 Last-Modified 却没有改变，这样会造成缓存命中的不准确。</p>
+<p> <strong>（2） Etag</strong><br> 服务器在返回资源的时候，在头信息中添加了 Etag 属性，这个属性是资源生成的唯一标识符，当资源发生改变的时候，这个值也会发生改变。在下一次资源请求时，浏览器会在请求头中添加一个 <code>If-None-Match</code> 属性，这个属性的值就是上次返回的资源的 Etag 的值。服务接收到请求后会根据这个值来和资源当前的 Etag 的值来进行比较，以此来判断资源是否发生改变，是否需要返回资源。这种方式比 Last-Modified 更加精确。</p>
+</li>
+</ol>
+<p>当 Last-Modified 和 Etag 一起使用时，Etag 的优先级更高。使用协商缓存时，服务器有时需要考虑负载均衡问题，因此多个服务器上同一资源的 Last-Modified 应该保持一致，由于每个服务器上 Etag 的值都不同，因此在考虑负载均衡时最好不要使用 Etag 属性。</p>
+<p><strong>总结</strong><br>强缓存策略和协商缓存策略在缓存命中时都会直接使用本地的缓存副本，区别只在于协商缓存会向服务器发送一次预请求。当缓存未命中时，都会向服务器发送请求来获取最新资源。在实际设置缓存机制时，强缓存策略和协商缓存策略一般会一起使用。浏览器首先会根据请求的信息判断，强缓存是否命中，如果命中则直接使用资源；未命中则根据头信息向服务器发起请求，使用协商缓存，如果协商缓存命中，服务器返回304状态，浏览器直接使用本地资源的副本，如果协商缓存未命中，服务器则返回最新的资源给浏览器。</p>
+<p><strong>点击刷新按钮或者按 F5、按 Ctrl+F5 （强制刷新）、地址栏回车有什么区别？</strong></p>
+<ul>
+<li>点击刷新按钮或者按 F5<br>浏览器直接携带If-Modifed-Since、If-None-Match向服务端发起请求，服务器会检查文件新鲜度，响应状态可能是 304或者200。</li>
+<li>按 Ctrl+F5（强制刷新）<br>浏览器直接让本地的缓存文件过期，并向服务器发起请求，但不会携带 If-Modifed-Since、If-None-Match，相当于初次打开网页的第一次请求，服务端响应状态是 200。</li>
+<li>地址栏回车<br>浏览器发起请求（伪造的请求），一切按照正常流程，首先检查是否超过过期时间，没有则直接使用本地缓存，过期了则发起请求，服务器检查文件新鲜度，最后返回304或者200。</li>
+</ul>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/HTTP%E7%BC%93%E5%AD%98/">#HTTP缓存</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/10/16/2021-10-16-CSS3%E6%96%B0%E7%89%B9%E6%80%A7/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">CSS3新特性</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/10/09/2021-10-09-HTML5%E6%96%B0%E7%89%B9%E6%80%A7/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">HTML5新特性</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;Comments</i>
+    </div>
+    
+
+        
+            
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Eli</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
+</body>
+</html>

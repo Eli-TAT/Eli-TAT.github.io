@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Eli">
+    
+    <title>
+        
+            前端安全 |
+        
+        Eli&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"https://avatars.githubusercontent.com/u/48319165?v=4","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </a>
+            
+            <a class="logo-title" href="/">
+                Eli&#39;s blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                LINKS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">LINKS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">前端安全</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Eli</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2021-07-16 11:17:40</span>
+        <span class="mobile">2021-07-16 11:17</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/">浏览器</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/">浏览器</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>常见的前端安全问题有 SQL 注入、XSS 攻击（跨站脚本攻击）以及 CSRF（跨站请求伪造）。</p>
+<h3 id="1-SQL-注入"><a href="#1-SQL-注入" class="headerlink" title="1. SQL 注入"></a>1. SQL 注入</h3><p>SQL 注入是指将 SQL 语句插入到 页面请求的查询字符串或 Web 表单中，以达到欺骗服务器执行恶意 SQL 语句，进而对数据库造成破坏。造成 SQL 注入的根本原因在于没有对用户输入的数据进行检验（原则上来说用户的输入都是不安全的），预防措施就是对用户的输入都进行检验、过滤。（前后端均可进行）</p>
+<h3 id="2-XSS-攻击"><a href="#2-XSS-攻击" class="headerlink" title="2. XSS 攻击"></a>2. XSS 攻击</h3><p>XSS（cross site script）全称跨站脚本攻击，指的是攻击者在网页中插入恶意脚本，当用户浏览该网页时嵌入的脚本就会被执行，从而达到恶意攻击的目的。</p>
+<h4 id="XSS-攻击原理"><a href="#XSS-攻击原理" class="headerlink" title="XSS 攻击原理"></a>XSS 攻击原理</h4><ol>
+<li>恶意用户想方设法在页面中插入一段脚本，比如在论坛留言区丢入一段 script 脚本。</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">alert</span>(<span class="string">&quot;hey!you are attacked&quot;</span>);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>浏览器在渲染 HTML 文档时会直接执行 script 标签中的代码，并不会因为 script 标签出现在留言区而察觉到异常。除此之外，script 标签还能嵌入到页面请求的查询字符串中。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">http</span>:<span class="comment">//192.168.1.102/xss/example2.php?name=&lt;script&gt;alert(&quot;hey!&quot;)&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>并不是只有 script 标签中才能插入脚本，img、a 等标签内的事件属性也能直接执行 js 代码。</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;w.123&quot;</span> <span class="attr">onerror</span>=<span class="string">&#x27;alert(&quot;hey!&quot;)&#x27;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">onmousemove</span>=<span class="string">&#x27;alert(&quot;hey!&quot;)&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">onclick</span>=<span class="string">&#x27;alert(&quot;hey!&quot;)&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="XSS-攻击分类"><a href="#XSS-攻击分类" class="headerlink" title="XSS 攻击分类"></a>XSS 攻击分类</h4><ol>
+<li><strong>反射型 XSS</strong></li>
+</ol>
+<p>反射型 XSS，又称非持久性 XSS，也就是攻击相对于访问者是一次性的，服务器只是将恶意脚本不加处理的“反射”给访问者的浏览器进行执行。上面所说的在页面请求的查询参数中嵌入脚本就属于这一类型，只有在访问特定的 url 时才会触发。</p>
+<ol start="2">
+<li><strong>储存型 XSS</strong></li>
+</ol>
+<p>储存型 XSS，又称持久型 XSS，也就是攻击相对于访问者是持续的，由于恶意脚本被存储在数据库中，服务器会将恶意脚本当做数据嵌入页面，任何用户只要访问该页面就会遭受到攻击，因此它的危害是 XSS 攻击中最大的。例如上面所说的在论坛留言板插入脚本。</p>
+<ol start="3">
+<li><strong>DOM XSS</strong></li>
+</ol>
+<p>顾名思义，DOM 跨站脚本攻击是指网页在 DOM 操作过程中造成恶意脚本被执行，用户因而遭到攻击，在这个过程中服务器响应的页面内容并没有发生改变，一切发生在本地环境中。</p>
+<h4 id="如何防范-XSS-攻击"><a href="#如何防范-XSS-攻击" class="headerlink" title="如何防范 XSS 攻击"></a>如何防范 XSS 攻击</h4><ul>
+<li>首先是过滤。在输入时对诸如 script、img、a 等标签进行过滤。</li>
+<li>其次是编码。一些常见的符号，如&lt;&gt;在输入的时候要对其进行转换编码，这样浏览器则不会对其进行解释执行，同时也会不影响显示效果。</li>
+<li>最后是限制。xss 攻击往往需要构造较长的字符串，因此对于一些可以预期的输入可以通过限制长度强制截断来进行防御。</li>
+</ul>
+<p>对于一些 SPA（单页面应用）框架，事先替开发者做好了对 XSS 攻击的预防处理。除此之外，浏览器方面对 XSS 的防范措施也越来越严格。总而言之，防范 XSS 攻击并不困难，只需要开发者考虑足够细致。</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26177815" >此部分参考自<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="3-CSRF-攻击"><a href="#3-CSRF-攻击" class="headerlink" title="3. CSRF 攻击"></a>3. CSRF 攻击</h3><p>CSRF（Cross-site request forgery）全称跨站请求伪造，简单来说就是通过盗取 cookie 等方式伪造用户身份，向服务器发起恶意请求。例如盗取某银行用户的登录 cookie 后，就可以伪造其身份向服务器发起取款、转账等请求。</p>
+<h4 id="如何防范-CSRF"><a href="#如何防范-CSRF" class="headerlink" title="如何防范 CSRF"></a>如何防范 CSRF</h4><p>防御 CSRF 攻击主要有三种策略</p>
+<ol>
+<li><strong>验证 HTTP Referer 字段</strong></li>
+</ol>
+<p>在 HTTP 请求报文头部有一个字段叫 Referer，它记录了该 HTTP 请求的来源地址。由于 CSRF 一般是在攻击者自己所在的域进行，利用该字段，开发者可以在服务器接收 HTTP 请求时对其来源地址进行验证，如果来源地址符合规定，那么请求就是合法的，否则就有可能是 CSRF 攻击，拒绝该请求。</p>
+<p>设置 Referer 字段并不是绝对安全的，在一些旧版本浏览器（比如 IE6 或 FF2）中存在可以修改 Referer 字段的 API，攻击者可以借助修改 HTTP 请求头中的 Referer 字段来达成 CSRF 攻击。即使在高版本浏览器中，由于 Referer 字段会记录下用户的访问来源，可能涉及用户隐私，所以用户可以自行设置请求时是否携带 Referer 字段，一旦用户选择不携带，合法用户的请求也会被认定为非法。</p>
+<ol start="2">
+<li><strong>在请求地址中添加 token 并验证</strong></li>
+</ol>
+<p>也就是在请求参数中加入 token 进行验证。</p>
+<ol start="3">
+<li><strong>在 HTTP 头中自定义属性并验证</strong></li>
+</ol>
+<p>相较上面每个请求地址中都加入 token，在 HTTP 头部中添加自定义属性携带 token 显得更为便捷，通过 XMLHttpRequest 对象，可以为所有该类请求加上自定义属性携带 token 进行验证。</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/stpeace/article/details/53512283" >此部分参考自<i class="fas fa-external-link-alt"></i></a></p>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/">#浏览器</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/07/16/2021-07-16-%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">防抖节流</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/07/16/2021-07-16-%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">跨域解决方案</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;Comments</i>
+    </div>
+    
+
+        
+            
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Eli</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
+</body>
+</html>

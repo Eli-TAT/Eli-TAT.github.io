@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Eli">
+    
+    <title>
+        
+            基础编程题 |
+        
+        Eli&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"https://avatars.githubusercontent.com/u/48319165?v=4","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </a>
+            
+            <a class="logo-title" href="/">
+                Eli&#39;s blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                LINKS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">LINKS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">基础编程题</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Eli</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2021-10-24 17:08:24</span>
+        <span class="mobile">2021-10-24 17:08</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>汇总一些基础的编程题目，避免眼高手低，导致实操时忘记或者弄错一些细节。</p>
+<h2 id="1-求小于正整数-num-的质数的数量"><a href="#1-求小于正整数-num-的质数的数量" class="headerlink" title="1. 求小于正整数 num 的质数的数量"></a>1. 求小于正整数 num 的质数的数量</h2><blockquote>
+<p>质数：除了 1 以外，只能被 1 和自身整除的数</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">countPrime</span>(<span class="params">num</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">  <span class="comment">// let result=[];</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">2</span>; i &lt; num; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> flag = <span class="literal">true</span>; <span class="comment">// 标记当前数是否为质数</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">2</span>; j &lt; i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (i % j === <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 有除了1和本身之外其他的因子，则不为质数</span></span><br><span class="line">        flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">      count++;</span><br><span class="line">      <span class="comment">// result.push(i)</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// console.log(result)</span></span><br><span class="line">  <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">countPrime</span>(<span class="number">7</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-判断一个字符串是否能分割为三个回文子字符串"><a href="#2-判断一个字符串是否能分割为三个回文子字符串" class="headerlink" title="2. 判断一个字符串是否能分割为三个回文子字符串"></a>2. 判断一个字符串是否能分割为三个回文子字符串</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 是否回文</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">isPlalindrome</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (str.<span class="property">length</span> === <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">return</span> str.<span class="title function_">split</span>(<span class="string">&quot;&quot;</span>).<span class="title function_">reverse</span>().<span class="title function_">join</span>(<span class="string">&quot;&quot;</span>) === str;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">bird</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> flag = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">const</span> result = [];</span><br><span class="line">  <span class="keyword">const</span> &#123; length &#125; = str;</span><br><span class="line">  <span class="comment">// i为第一个分分割点，j为第二个</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = length - <span class="number">1</span>; j &gt; i; j--) &#123;</span><br><span class="line">      <span class="keyword">let</span> s1 = str.<span class="title function_">substring</span>(<span class="number">0</span>, i);</span><br><span class="line">      <span class="keyword">let</span> s2 = str.<span class="title function_">substring</span>(i, j);</span><br><span class="line">      <span class="keyword">let</span> s3 = str.<span class="title function_">substring</span>(j, length);</span><br><span class="line">      <span class="comment">// console.log(s1,s2,s3)</span></span><br><span class="line">      <span class="keyword">if</span> (<span class="title function_">isPlalindrome</span>(s1) &amp;&amp; <span class="title function_">isPlalindrome</span>(s2) &amp;&amp; <span class="title function_">isPlalindrome</span>(s3)) &#123;</span><br><span class="line">        flag = <span class="literal">true</span>;</span><br><span class="line">        result.<span class="title function_">push</span>([s1, s2, s3]);</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line">        <span class="keyword">return</span> flag;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">bird</span>(<span class="string">&quot;sbsabaa&quot;</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-实现一个方法，生成随机数字验证码（如果要求生成-100-个不能重复，怎么实现）"><a href="#3-实现一个方法，生成随机数字验证码（如果要求生成-100-个不能重复，怎么实现）" class="headerlink" title="3. 实现一个方法，生成随机数字验证码（如果要求生成 100 个不能重复，怎么实现）"></a>3. 实现一个方法，生成随机数字验证码（如果要求生成 100 个不能重复，怎么实现）</h2><p>使用 Math.random 难免会有重复的情况出现，要保证不重复，思路就是用一个额外的数据结构来存储已经出现的值（可以是数组也可以是 Map）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">generateVerifiedCode</span>(<span class="params">len, total</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> result = [];</span><br><span class="line">  <span class="keyword">const</span> cache = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line">  <span class="keyword">let</span> code;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; total; i++) &#123;</span><br><span class="line">    <span class="comment">// Math.random()生成[0,1)之间的任意数</span></span><br><span class="line">    code = <span class="title class_">String</span>(<span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="title class_">Math</span>.<span class="title function_">pow</span>(<span class="number">10</span>, len)));</span><br><span class="line">    <span class="keyword">const</span> &#123; length &#125; = code;</span><br><span class="line">    <span class="comment">// 位数不够则在前面补0</span></span><br><span class="line">    <span class="keyword">if</span> (length &lt; len) &#123;</span><br><span class="line">      code = <span class="string">&quot;0&quot;</span>.<span class="title function_">repeat</span>(len - length) + code;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!cache.<span class="title function_">has</span>(code)) &#123;</span><br><span class="line">      cache.<span class="title function_">set</span>(code, <span class="literal">true</span>);</span><br><span class="line">      result.<span class="title function_">push</span>(code);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      total++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">generateVerifiedCode</span>(<span class="number">6</span>, <span class="number">1000</span>));</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">generateVerifiedCode</span>(<span class="params">len, total</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> result = [];</span><br><span class="line">  <span class="keyword">const</span> cache = [];</span><br><span class="line">  <span class="keyword">let</span> code;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; total; i++) &#123;</span><br><span class="line">    code = <span class="title class_">String</span>(<span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="title class_">Math</span>.<span class="title function_">pow</span>(<span class="number">10</span>, len)));</span><br><span class="line">    <span class="keyword">const</span> &#123; length &#125; = code;</span><br><span class="line">    <span class="keyword">if</span> (length &lt; len) &#123;</span><br><span class="line">      code = <span class="string">&quot;0&quot;</span>.<span class="title function_">repeat</span>(len - length) + code;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!cache[code]) &#123;</span><br><span class="line">      cache[code] = <span class="literal">true</span>;</span><br><span class="line">      result.<span class="title function_">push</span>(code);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      total++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">generateVerifiedCode</span>(<span class="number">6</span>, <span class="number">100</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-生成一个随机字符串"><a href="#4-生成一个随机字符串" class="headerlink" title="4. 生成一个随机字符串"></a>4. 生成一个随机字符串</h2><p>提供一个巧妙的解法，将一个随机数转为 36 进制，36 进制中就涵盖了 0-9 以及 a-z。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">generateRandomStr</span>(<span class="params">length</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> str = <span class="title class_">Math</span>.<span class="title function_">random</span>()</span><br><span class="line">    .<span class="title function_">toString</span>(<span class="number">36</span>) <span class="comment">// 进制超过36就会报错</span></span><br><span class="line">    .<span class="title function_">slice</span>(<span class="number">2</span>, length + <span class="number">2</span>);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(str);</span><br><span class="line">  <span class="keyword">return</span> str;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="title function_">generateRandomStr</span>(<span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-实现-add-1-2-3"><a href="#6-实现-add-1-2-3" class="headerlink" title="6. 实现 add(1)(2)(3)"></a>6. 实现 add(1)(2)(3)</h2><ul>
+<li>暴力版</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">simpleAdd</span>(<span class="params">a</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">b</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">c</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> a + b + c;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">simpleAdd</span>(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>));</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>柯里化</li>
+</ul>
+<h2 id="7-求字符串中不重复最长子串的长度"><a href="#7-求字符串中不重复最长子串的长度" class="headerlink" title="7. 求字符串中不重复最长子串的长度"></a>7. 求字符串中不重复最长子串的长度</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 滑动窗口</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getLongestSubstring</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> map = <span class="keyword">new</span> <span class="title class_">Map</span>(); <span class="comment">// 存储出现的字符（键为字符，值为字符在字符串中的索引）</span></span><br><span class="line">  <span class="keyword">let</span> left = -<span class="number">1</span>; <span class="comment">// 滑动窗口的左边界索引</span></span><br><span class="line">  <span class="keyword">let</span> result = <span class="number">0</span>; <span class="comment">// 记录的字串长度</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; str.<span class="property">length</span>; j++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (map.<span class="title function_">has</span>(str[j])) &#123;</span><br><span class="line">      <span class="comment">// 一旦出现相同字符，移动滑动窗口左边界至该字符前一次出现的位置</span></span><br><span class="line">      left = <span class="title class_">Math</span>.<span class="title function_">max</span>(left, map.<span class="title function_">get</span>(str[j]));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 计算不重复最长字串的长度</span></span><br><span class="line">    result = <span class="title class_">Math</span>.<span class="title function_">max</span>(result, j - left);</span><br><span class="line">    <span class="comment">// 以字符为键，记录字符的索引值</span></span><br><span class="line">    map.<span class="title function_">set</span>(str[j], j);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">getLongestSubstring</span>(<span class="string">&quot;abcdeabbdeefghjkllll&quot;</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-求斐波拉契数"><a href="#8-求斐波拉契数" class="headerlink" title="8. 求斐波拉契数"></a>8. 求斐波拉契数</h2><ul>
+<li>递归版</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fibonacci</span>(<span class="params">n</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (n &lt;= <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">  <span class="keyword">if</span> (n &lt;= <span class="number">2</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">fibonacci</span>(n - <span class="number">1</span>) + <span class="title function_">fibonacci</span>(n - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>递归过程中由于对许多值进行了重复运算，因此很容易导致爆栈问题。解决方案是额外用一个数据结构来缓存已经计算过的斐波拉契数。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fibonacci</span>(<span class="params">n</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (n &lt;= <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">  <span class="keyword">const</span> cache = [<span class="number">0</span>, <span class="number">1</span>]; <span class="comment">// 缓存</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">fibo</span>(<span class="params">n</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (cache[n] !== <span class="literal">undefined</span>) &#123;</span><br><span class="line">      <span class="comment">//</span></span><br><span class="line">      <span class="keyword">return</span> cache[n];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (cache[n] = <span class="title function_">fibo</span>(n - <span class="number">1</span>) + <span class="title function_">fibo</span>(n - <span class="number">2</span>));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">fibo</span>(n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>迭代版<blockquote>
+<p>迭代往往比递归的效率要高</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fibonacci</span>(<span class="params">n</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (n &lt;= <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">  <span class="keyword">if</span> (n &lt;= <span class="number">2</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">let</span> fiboNum1 = <span class="number">1</span>,</span><br><span class="line">    fiboNum2 = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">let</span> fiboNum;</span><br><span class="line">  <span class="comment">// 注意循环起点</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">3</span>; i &lt;= n; i++) &#123;</span><br><span class="line">    fiboNum = fiboNum1 + fiboNum2;</span><br><span class="line">    fiboNum2 = fiboNum1;</span><br><span class="line">    fiboNum1 = fiboNum;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> fiboNum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">fibonacci</span>(<span class="number">6</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="9-小孩儿报数问题"><a href="#9-小孩儿报数问题" class="headerlink" title="9. 小孩儿报数问题"></a>9. 小孩儿报数问题</h2><p>有 100 个小孩儿，编号 1-100，围成一圈依此报数，1、2、3 数到 3 的小孩儿退出这个圈， 然后下一个小孩 重新报数 1、2、3，问最后剩下的那个小孩儿的编号是多少?</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">childNum</span>(<span class="params">num, count</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> allplayer = [];</span><br><span class="line">  <span class="comment">// 生成编号</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; num; i++) &#123;</span><br><span class="line">    allplayer[i] = i + <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> exitCount = <span class="number">0</span>; <span class="comment">// 离开人数</span></span><br><span class="line">  <span class="keyword">let</span> counter = <span class="number">0</span>; <span class="comment">// 记录报数</span></span><br><span class="line">  <span class="keyword">let</span> curIndex = <span class="number">0</span>; <span class="comment">// 当前下标</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 直到仅剩一人</span></span><br><span class="line">  <span class="keyword">while</span> (exitCount &lt; num - <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (allplayer[curIndex] !== <span class="literal">undefined</span>) counter++;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 数到指定的数字，移除</span></span><br><span class="line">    <span class="keyword">if</span> (counter == count) &#123;</span><br><span class="line">      <span class="keyword">delete</span> allplayer[curIndex];</span><br><span class="line">      counter = <span class="number">0</span>;</span><br><span class="line">      exitCount++;</span><br><span class="line">    &#125;</span><br><span class="line">    curIndex++;</span><br><span class="line">    <span class="comment">// 数到最后一个人，重头开始</span></span><br><span class="line">    <span class="keyword">if</span> (curIndex == num) &#123;</span><br><span class="line">      curIndex = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// console.log(allplayer)</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; num; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (allplayer[i] !== <span class="literal">undefined</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> allplayer[i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">childNum</span>(<span class="number">100</span>, <span class="number">3</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-实现每隔一秒打印-1-2-3-4"><a href="#10-实现每隔一秒打印-1-2-3-4" class="headerlink" title="10. 实现每隔一秒打印 1,2,3,4"></a>10. 实现每隔一秒打印 1,2,3,4</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用闭包</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">  <span class="comment">// 使用IIFE，将i保存在闭包中，不受影响</span></span><br><span class="line">  (<span class="keyword">function</span> (<span class="params">i</span>) &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">    &#125;, i * <span class="number">1000</span>);</span><br><span class="line">  &#125;)(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 let 块级作用域</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">  &#125;, i * <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="11-循环打印红黄绿"><a href="#11-循环打印红黄绿" class="headerlink" title="11. 循环打印红黄绿"></a>11. 循环打印红黄绿</h2><p>红灯 3s 亮一次，绿灯 1s 亮一次，黄灯 2s 亮一次，让三个灯不断交替重复亮灯。<br><strong>思路</strong><br>通过异步编程方案，实现间隔一段时间后亮灯；通过递归实现不断重复亮灯；</p>
+<ul>
+<li>回调函数实现</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 亮灯函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">red</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;red&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">green</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;green&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">yellow</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;yellow&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">task</span> = (<span class="params">timer, light, callback</span>) =&gt; &#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (light === <span class="string">&quot;red&quot;</span>) &#123;</span><br><span class="line">      <span class="title function_">red</span>();</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (light === <span class="string">&quot;green&quot;</span>) &#123;</span><br><span class="line">      <span class="title function_">green</span>();</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (light === <span class="string">&quot;yellow&quot;</span>) &#123;</span><br><span class="line">      <span class="title function_">yellow</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">callback</span>();</span><br><span class="line">  &#125;, timer);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">step</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="title function_">task</span>(<span class="number">3000</span>, <span class="string">&quot;red&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">task</span>(<span class="number">2000</span>, <span class="string">&quot;green&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="title function_">task</span>(<span class="number">1000</span>, <span class="string">&quot;yellow&quot;</span>, step);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="title function_">step</span>();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Promise 实现</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">task</span> = (<span class="params">timer, light</span>) =&gt;</span><br><span class="line">  <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (light === <span class="string">&quot;red&quot;</span>) &#123;</span><br><span class="line">        <span class="title function_">red</span>();</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (light === <span class="string">&quot;green&quot;</span>) &#123;</span><br><span class="line">        <span class="title function_">green</span>();</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (light === <span class="string">&quot;yellow&quot;</span>) &#123;</span><br><span class="line">        <span class="title function_">yellow</span>();</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="title function_">resolve</span>();</span><br><span class="line">    &#125;, timer);</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">step</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="title function_">task</span>(<span class="number">3000</span>, <span class="string">&quot;red&quot;</span>)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function">() =&gt;</span> <span class="title function_">task</span>(<span class="number">2000</span>, <span class="string">&quot;green&quot;</span>))</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function">() =&gt;</span> <span class="title function_">task</span>(<span class="number">2100</span>, <span class="string">&quot;yellow&quot;</span>))</span><br><span class="line">    .<span class="title function_">then</span>(step);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="title function_">step</span>();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>async 函数实现</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">step</span> = <span class="keyword">async</span> (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">task</span>(<span class="number">3000</span>, <span class="string">&quot;red&quot;</span>);</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">task</span>(<span class="number">2000</span>, <span class="string">&quot;green&quot;</span>);</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">task</span>(<span class="number">1000</span>, <span class="string">&quot;yellow&quot;</span>);</span><br><span class="line">  <span class="title function_">step</span>();</span><br><span class="line">&#125;;</span><br><span class="line"><span class="title function_">step</span>();</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-用-Promise-实现图片的异步加载"><a href="#12-用-Promise-实现图片的异步加载" class="headerlink" title="12. 用 Promise 实现图片的异步加载"></a>12. 用 Promise 实现图片的异步加载</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">imgAsync</span> = (<span class="params">url</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> img = <span class="keyword">new</span> <span class="title class_">Image</span>();</span><br><span class="line">    img.<span class="property">src</span> = url;</span><br><span class="line">    img.οnlοad = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`图片请求成功，此处进行通用操作`</span>);</span><br><span class="line">      <span class="title function_">resolve</span>(img);</span><br><span class="line">    &#125;;</span><br><span class="line">    img.οnerrοr = <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`失败，此处进行失败的通用操作`</span>);</span><br><span class="line">      <span class="title function_">reject</span>(err);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="title function_">imgAsync</span>(<span class="string">&quot;url&quot;</span>)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;加载成功&quot;</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;加载失败&quot;</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="13-将数字每千分位隔开"><a href="#13-将数字每千分位隔开" class="headerlink" title="13. 将数字每千分位隔开"></a>13. 将数字每千分位隔开</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">format</span>(<span class="params">num</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (num &lt; <span class="number">1000</span>) <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">// 将数字转换成字符串</span></span><br><span class="line">  num = num.<span class="title function_">toString</span>();</span><br><span class="line">  <span class="keyword">let</span> decimals = <span class="string">&quot;&quot;</span>; <span class="comment">// 小数位</span></span><br><span class="line">  num.<span class="title function_">indexOf</span>(<span class="string">&quot;.&quot;</span>) &gt; -<span class="number">1</span> ? (decimals = <span class="string">&quot;.&quot;</span> + num.<span class="title function_">split</span>(<span class="string">&quot;.&quot;</span>)[<span class="number">1</span>]) : <span class="string">&quot;.&quot;</span> + decimals;</span><br><span class="line">  <span class="keyword">const</span> len = num.<span class="title function_">split</span>(<span class="string">&quot;.&quot;</span>)[<span class="number">0</span>].<span class="property">length</span>; <span class="comment">// 整数部分长度</span></span><br><span class="line">  <span class="keyword">let</span> remainder = len % <span class="number">3</span>;</span><br><span class="line">  <span class="keyword">if</span> (len % <span class="number">3</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      num.<span class="title function_">slice</span>(<span class="number">0</span>, remainder) +</span><br><span class="line">      <span class="string">&quot;,&quot;</span> +</span><br><span class="line">      num.<span class="title function_">slice</span>(remainder, len).<span class="title function_">match</span>(<span class="regexp">/\d&#123;3&#125;/g</span>).<span class="title function_">join</span>(<span class="string">&quot;,&quot;</span>) +</span><br><span class="line">      decimals</span><br><span class="line">    );</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> num.<span class="title function_">slice</span>(<span class="number">0</span>, len).<span class="title function_">match</span>(<span class="regexp">/\d&#123;3&#125;/g</span>).<span class="title function_">join</span>(<span class="string">&quot;,&quot;</span>) + decimals;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">999.888</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">format</span>(<span class="number">333112323.3456</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="14-实现非负大整数相加（不用-bigint）"><a href="#14-实现非负大整数相加（不用-bigint）" class="headerlink" title="14. 实现非负大整数相加（不用 bigint）"></a>14. 实现非负大整数相加（不用 bigint）</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sumBigNumber</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="keyword">let</span> temp = <span class="number">0</span>;</span><br><span class="line">  <span class="comment">// 分割后按位相加</span></span><br><span class="line">  a = <span class="title class_">String</span>(a).<span class="title function_">split</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">  b = <span class="title class_">String</span>(b).<span class="title function_">split</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">  <span class="keyword">while</span> (a.<span class="property">length</span> || b.<span class="property">length</span> || temp) &#123;</span><br><span class="line">    <span class="comment">// 从个位开始，按位相加</span></span><br><span class="line">    <span class="comment">// ~~即两次按位取反，值不变，可将一个值转为number类型</span></span><br><span class="line">    temp += ~~a.<span class="title function_">pop</span>() + ~~b.<span class="title function_">pop</span>();</span><br><span class="line">    <span class="comment">// 从个位开始拼接每位计算的结果</span></span><br><span class="line">    result = (temp % <span class="number">10</span>) + result;</span><br><span class="line">    <span class="comment">// 注意满10进1，判断当前位是否会进位</span></span><br><span class="line">    temp = temp &gt; <span class="number">9</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result.<span class="title function_">replace</span>(<span class="regexp">/^0+/</span>, <span class="string">&quot;&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">sumBigNumber</span>(<span class="number">9007199254740994</span>, <span class="number">18014398509481984</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">9007199254740994n</span> + <span class="number">18014398509481984n</span>); <span class="comment">// 对比bigint计算的结果</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="15-解析-URL-中的参数部分"><a href="#15-解析-URL-中的参数部分" class="headerlink" title="15. 解析 URL 中的参数部分"></a>15. 解析 URL 中的参数部分</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">parseParam</span>(<span class="params">url</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> paramsStr = <span class="regexp">/.+\?(.+)$/</span>.<span class="title function_">exec</span>(url)[<span class="number">1</span>]; <span class="comment">// 取出?后的参数部分</span></span><br><span class="line">  <span class="keyword">const</span> paramsArr = paramsStr.<span class="title function_">split</span>(<span class="string">&quot;&amp;&quot;</span>); <span class="comment">// 逐个分割参数，存入数组</span></span><br><span class="line">  <span class="keyword">let</span> paramsObj = &#123;&#125;; <span class="comment">// 参数对象</span></span><br><span class="line">  paramsArr.<span class="title function_">forEach</span>(<span class="function">(<span class="params">param</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="regexp">/=/</span>.<span class="title function_">test</span>(param)) &#123;</span><br><span class="line">      <span class="comment">// 处理有 value 的参数</span></span><br><span class="line">      <span class="keyword">let</span> [key, val] = param.<span class="title function_">split</span>(<span class="string">&quot;=&quot;</span>); <span class="comment">// 分割 key 和 value</span></span><br><span class="line">      val = <span class="built_in">decodeURIComponent</span>(val); <span class="comment">// 解码</span></span><br><span class="line">      val = <span class="regexp">/^\d+$/</span>.<span class="title function_">test</span>(val) ? <span class="built_in">parseFloat</span>(val) : val; <span class="comment">// 判断是否转为数字</span></span><br><span class="line">      <span class="keyword">if</span> (paramsObj.<span class="title function_">hasOwnProperty</span>(key)) &#123;</span><br><span class="line">        <span class="comment">// 如果已有 key，则添加一个值</span></span><br><span class="line">        paramsObj[key] = [].<span class="title function_">concat</span>(paramsObj[key], val);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 如果没有这个 key，创建 key 并设置值</span></span><br><span class="line">        paramsObj[key] = val;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 处理没有 value 的参数</span></span><br><span class="line">      paramsObj[param] = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> paramsObj;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">let</span> url =</span><br><span class="line">  <span class="string">&quot;http://www.domain.com/?user=anonymous&amp;id=123&amp;id=456&amp;city=%E5%8C%97%E4%BA%AC&amp;enabled&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">parseParam</span>(url));</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/11/11/2021-11-11-%E5%B8%B8%E7%94%A8%E5%B8%83%E5%B1%80%E6%96%B9%E5%BC%8F/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">常用布局方式</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/10/22/2021-10-22-webpack%E4%BC%98%E5%8C%96/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">webpack优化</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;Comments</i>
+    </div>
+    
+
+        
+            
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Eli</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
+</body>
+</html>

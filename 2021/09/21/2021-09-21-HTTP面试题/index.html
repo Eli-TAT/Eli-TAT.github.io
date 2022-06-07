@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Eli">
+    
+    <title>
+        
+            HTTP面试题 |
+        
+        Eli&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"https://avatars.githubusercontent.com/u/48319165?v=4","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </a>
+            
+            <a class="logo-title" href="/">
+                Eli&#39;s blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                LINKS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">LINKS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">HTTP面试题</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Eli</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2021-09-21 17:28:02</span>
+        <span class="mobile">2021-09-21 17:28</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/HTTP/">HTTP</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/HTTPS/">HTTPS</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <meta name="referrer" content="no-referrer"/>
+
+<p>汇总一些 HTTP 常见的面试题</p>
+<h2 id="1-HTTP-协议的主要特点"><a href="#1-HTTP-协议的主要特点" class="headerlink" title="1. HTTP 协议的主要特点"></a>1. HTTP 协议的主要特点</h2><ul>
+<li>简单快速 （每个资源的 URL 是固定的，只需通过 URL 即可访问）</li>
+<li>灵活（可以传输不同类型的数据，通过报文头部的 content-type 字段设置数据格式）</li>
+<li>无连接（一次连接后会自动断开，不会保持连接）</li>
+<li>无状态（每次 HTTP 请求都是独立的，默认不会保存上下文信息。通过 cookie 可以实现有状态的连接）</li>
+</ul>
+<h2 id="2-HTTP-报文头部组成部分"><a href="#2-HTTP-报文头部组成部分" class="headerlink" title="2.HTTP 报文头部组成部分"></a>2.HTTP 报文头部组成部分</h2><p><img src="https://img-blog.csdnimg.cn/20200403132018916.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70" alt="HTTP报文头部"></p>
+<ol>
+<li>请求报文头部</li>
+</ol>
+<ul>
+<li>请求行<br>包含请求方法，请求地址，HTTP 协议版本</li>
+<li>请求头<br>包含各种头部字段（如 Host、Connection、Cookie 等），也可以携带自定义头部字段</li>
+<li>空行<br>告诉服务端请求头结束，下面是请求体部分</li>
+<li>请求体<br>放置请求数据</li>
+</ul>
+<ol start="2">
+<li>响应报文头部</li>
+</ol>
+<ul>
+<li>状态行<br>包含 HTTP 协议版本，响应状态码</li>
+<li>响应头<br>包含各种头部字段（如 Server、Content-Type、Content-Length 等）</li>
+<li>空行<br>告诉客户端响应头结束，下面是响应体部分</li>
+<li>请求体<br>放置响应的信息</li>
+</ul>
+<h2 id="3-HTTP-常用的请求方式"><a href="#3-HTTP-常用的请求方式" class="headerlink" title="3. HTTP 常用的请求方式"></a>3. HTTP 常用的请求方式</h2><ul>
+<li>GET 向指定的 URL 请求数据</li>
+<li>POST 向服务器提交数据（如提交表单或上传文件）</li>
+<li>HEAD 跟 GET 类似，但响应中只返回报文头部</li>
+<li>PUT 提交数据替代指定内容</li>
+<li>DELETE 请求服务器删除指定内容</li>
+<li>OPTIONS 获取允许的请求方式<br>…</li>
+</ul>
+<p>更多请参考<a class="link"   target="_blank" rel="noopener" href="https://www.runoob.com/http/http-methods.html" >HTTP 请求方法<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="4-HTTP-常用的状态码"><a href="#4-HTTP-常用的状态码" class="headerlink" title="4. HTTP 常用的状态码"></a>4. HTTP 常用的状态码</h2><ul>
+<li>1XX：表示接受的请求正在处理</li>
+<li>2XX：表示请求正常处理完成</li>
+<li>3XX：表示资源重定向，需要重新请求</li>
+<li>4XX：表示客户端请求错误，服务器无法处理</li>
+<li>5XX：表示服务端处理请求出现错误</li>
+</ul>
+<p><strong>常用状态码</strong><br>101 请求协议切换，请 HTTP 切换到 WebSockt<br>200 请求成功，正常返回消息<br>301 资源永久重定向，即请求的资源永久迁移到了其他地址<br>302 资源临时重定向，请求的资源临时转移至新的 URL<br>304 请求的资源未更新，继续使用本地缓存<br>400 客户端请求有语法错误，服务端无法理解<br>403 服务端禁止访问<br>404 未找到请求的资源<br>405 请求方法不被允许<br>500 服务器内部错误，无法完成请求<br>502 网关错误</p>
+<p>更多请参考<a class="link"   target="_blank" rel="noopener" href="https://www.runoob.com/http/http-status-codes.html" >HTTP 状态码<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="5-GET-和-POST-请求的区别"><a href="#5-GET-和-POST-请求的区别" class="headerlink" title="5. GET 和 POST 请求的区别"></a>5. GET 和 POST 请求的区别</h2><ul>
+<li>GET 请求默认会被浏览器缓存，而 POST 请求需要手动开启</li>
+<li>GET 请求回退时是无害的，不会重新发起请求，而 POST 会再次请求数据</li>
+<li>GET 请求的参数会保存在浏览器历史记录中，而 POST 不会</li>
+<li>GET 请求的参数直接放在 URL 中，通过&amp;连接，POST 请求的参数则放在请求体内</li>
+<li>GET 请求在 URL 中传递的参数长度有限制（各浏览器中标准不同），而 POST 没有限制</li>
+<li>GET 请求只支持 URL 编码，而 POST 支持多种编码方式</li>
+<li>GET 请求的参数只能是 ASCII 格式的数据，POST 请求的参数可以使用任何格式的数据</li>
+<li>GET 请求比 POST 请求不安全，请求参数直接暴露在 URL 中，不能用来传输敏感数据</li>
+<li>GET 请求产生的 URL 可以被浏览器收藏，而 post 不可以</li>
+</ul>
+<h2 id="6-HTTP-持久连接（长连接）"><a href="#6-HTTP-持久连接（长连接）" class="headerlink" title="6. HTTP 持久连接（长连接）"></a>6. HTTP 持久连接（长连接）</h2><blockquote>
+<p>HTTP 连接可以分为短连接和长连接，由于 HTTP 协议采用“请求-应答”模式，每次请求&#x2F;响应都要在客户端和服务端之间新建一个连接，完成之后立即断开连接（因为 HTTP 是无连接的协议），这属于短连接。长连接就是指使用 Keep-Alive ，使客户端到服务端的连接持续有效，避免了当后续出现请求时需要重新建立连接。</p>
+</blockquote>
+<p>HTTP 长连接的实质是 TCP 长连接，所谓的长连接实际上是在 TCP 层实现的，TCP 连接在通讯双方之间建立了一个全双工通信通道，通过复用一个 TCP 连接可以持续进行通信，也就实现了 HTTP 的长连接。</p>
+<p><strong>实现方式</strong><br>要实现 HTTP 持久连接，只需服务端在响应头中设置<code>Connection：Keep-alive</code>即可。HTTP1.1 默认是长连接，HTTP1.0 也支持长连接，但需要手动开启。</p>
+<h2 id="7-HTTP-管线化"><a href="#7-HTTP-管线化" class="headerlink" title="7. HTTP 管线化"></a>7. HTTP 管线化</h2><p>简单来说就是客户端将多个 HTTP 请求打包为一个发送给服务端，服务端也可以将多个响应打包成一个返回给客户端（服务端不一定要进行管线化）。</p>
+<p><strong>特点</strong></p>
+<ul>
+<li>管线化依赖于持久连接，仅 HTTP&#x2F;1.1 支持</li>
+<li>只有 get 和 head 请求可以进行管线化，post 有所限制</li>
+<li>初次创建连接时不应启动管线化，因为请求的服务器不一定支持 HTTP &#x2F; 1.1</li>
+<li>HTTP &#x2F; 1.1 要求服务器端支持管线化，但并不要求服务器端也对响应进行管线化处理</li>
+<li>管线化不会影响响应返回的顺序（服务端未对响应进行管线化时）</li>
+<li>开启管线化可能并不会带来大幅度的性能提升，由于很多服务器端和代理程序对管线化的支持并不好，因此现代浏览器如 Chrome 和 Firefox 默认并未开启管线化支持</li>
+</ul>
+<h2 id="8-HTTP-和-HTTPS-的区别"><a href="#8-HTTP-和-HTTPS-的区别" class="headerlink" title="8. HTTP 和 HTTPS 的区别"></a>8. HTTP 和 HTTPS 的区别</h2><p>HTTPS（Hyper Text Transfer Protocol over Secure Socket Layer）是以安全为目标的 HTTP 通道，在 HTTP 的基础上通过传输加密和身份认证保证了传输过程的安全性，简单来说就是 HTTP 的安全版。</p>
+<p><strong>HTTPS 的作用</strong></p>
+<ul>
+<li>保证数据传输的安全性</li>
+<li>确认网站的真实性，防止钓鱼网站</li>
+</ul>
+<p><strong>HTTP 与 HTTPS 的区别</strong></p>
+<ul>
+<li>HTTP 是明文传输，HTTPS 通过 SSL\TLS层 对报文进行了加密；</li>
+<li>HTTP 的端口号是 80，HTTPS 是 443；</li>
+<li>HTTPS 协议相比 HTTP 多了一个 SSL 层，可进行数据加密、完整性校验、身份验证，比 HTTP 协议要安全；</li>
+<li>HTTPS 需要到 CA（Certificate Authority） 申请证书，一般免费证书很少，需要购买；</li>
+<li>HTTPS 由于需要进行加密、解密操作，因此性能消耗会大于 HTTP；</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/10153392-febdae2494ccb072?imageMogr2/auto-orient/strip%7CimageView2/2/w/534/format/webp" alt="HTTPS示意图"></p>
+<p><strong>HTTPS 的原理</strong><br>HTTPS 的安全性通过介于 HTTP 层和 TCP 层之间的 SSL 层实现，具体如下：</p>
+<ul>
+<li>数据加密<br>HTTPS 采用非对称加密+对称加密结合的方式，对传输数据进行加密。</li>
+<li>身份验证<br>通过CA颁布的数字证书进行身份验证，保证当前服务器的真实性。</li>
+</ul>
+<p><a class="link"   target="_blank" rel="noopener" href="https://juejin.cn/post/6844903504046211079#heading-9" >参考自<i class="fas fa-external-link-alt"></i></a></p>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">#计算机网络</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/HTTP/">#HTTP</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/HTTPS/">#HTTPS</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/09/23/2021-09-23-%E7%A7%BB%E5%8A%A8%E7%AB%AF1px%E5%83%8F%E7%B4%A0%E9%80%82%E9%85%8D/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">移动端1px像素适配</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/09/21/2021-09-21-%E5%89%8D%E7%AB%AF%E5%8A%A0%E5%AF%86/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">前端加密</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;Comments</i>
+    </div>
+    
+
+        
+            
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Eli</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Eli">
+    
+    <title>
+        
+            事件循环机制 |
+        
+        Eli&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"https://avatars.githubusercontent.com/u/48319165?v=4","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </a>
+            
+            <a class="logo-title" href="/">
+                Eli&#39;s blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                LINKS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">LINKS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">事件循环机制</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://avatars.githubusercontent.com/u/48319165?v=4">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Eli</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2021-06-23 16:27:22</span>
+        <span class="mobile">2021-06-23 16:27</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/JS/">JS</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/JS/">JS</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/">浏览器</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">事件循环</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <meta name="referrer" content="no-referrer"/>
+
+<blockquote>
+<p>事件循环机制是一个比较底层且十分重要的概念，有助于更深入地理解浏览器是处理各种任务以及 JS 程序是如何执行的。需要注意的是，在不同的 JS 执行环境中实现事件循环机制的方式略有不同，这里只讨论浏览器环境。node环境下的事件循环机制请参考<a class="link"   target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/docs/guides/event-loop-timers-and-nexttick/" >node官方文档<i class="fas fa-external-link-alt"></i></a>、<a class="link"   target="_blank" rel="noopener" href="https://juejin.cn/post/6916157109906341902/#heading-81" >Node 中的 Event Loop 和浏览器中的有什么区别<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<blockquote>
+<p>介绍事件循环之前需要有一些准备知识。</p>
+</blockquote>
+<h2 id="1-浏览器中的渲染进程"><a href="#1-浏览器中的渲染进程" class="headerlink" title="1. 浏览器中的渲染进程"></a>1. 浏览器中的渲染进程</h2><p>浏览器是多进程的，<strong>渲染进程</strong>属于浏览器多进程中的一种，主要负责页面渲染、脚本执行、事件处理等，其中包含的线程有 GUI 渲染线程、JS 引擎线程、事件触发线程等。<br><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d6e583f59dc742b9b4e88cf3a3b0f1d4~tplv-k3u1fbpfcp-watermark.awebp" alt="浏览器中的进程"></p>
+<h3 id="GUI-渲染线程"><a href="#GUI-渲染线程" class="headerlink" title="GUI 渲染线程"></a>GUI 渲染线程</h3><p>GUI 渲染线程主要用于解析 HTML 文档，对网页进行渲染。<br><strong>注意：</strong>GUI 渲染线程和 JS 引擎线程是互斥的，当 JS 引擎执行时 GUI 线程会被挂起，GUI 更新会被保存在一个队列中等到 JS 引擎空闲时立即被执行。</p>
+<h3 id="JS-引擎线程"><a href="#JS-引擎线程" class="headerlink" title="JS 引擎线程"></a>JS 引擎线程</h3><p>JS 引擎线程也称为 JS 内核，负责解析和运行 Javascript 脚本。JS 引擎线程会一直等待着<strong>任务队列</strong>中任务的到来，然后加以处理，一个 Tab 页中始终只有一个 JS 引擎线程在运行 JS 程序；</p>
+<p><strong>JS 为什么是单线程的？</strong><br>js 作为浏览器脚本语言，其主要用途就是与用户交互以及操作 DOM，这决定了它只能是单线程，否则会带来许多同步问题。举个简单的例子，如果有两个线程同时操作了某个 DOM 节点，那么浏览器就不知道该以谁为准了。</p>
+<p>但是仅仅依靠单线程是无法处理各种复杂情况的，单线程只能按照顺序执行任务，然而 JS 引擎线程还需要处理那些耗时的任务（如各种 UI 事件、定时器任务、异步网络请求），这样就会造成 JS 引擎线程的阻塞，影响整个页面的性能，这时就需要事件循环机制。</p>
+<h2 id="2-事件循环中的概念"><a href="#2-事件循环中的概念" class="headerlink" title="2.事件循环中的概念"></a>2.事件循环中的概念</h2><blockquote>
+<p>ECMAScript中并没有提到事件循环，不过在HTML规范中有详细说明 <a class="link"   target="_blank" rel="noopener" href="https://html.spec.whatwg.org/#event-loops" >https://html.spec.whatwg.org/#event-loops<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<h3 id="任务队列"><a href="#任务队列" class="headerlink" title="任务队列"></a>任务队列</h3><p>在事件循环机制中，任务队列就是一个消息队列，具有队列数据结构的特征（先进先出），用来存放任务（浏览器执行的其他操作，如UI事件的处理函数、定时器任务等），其中任务又分为两类，微任务和宏任务。</p>
+<h3 id="微任务和宏任务"><a href="#微任务和宏任务" class="headerlink" title="微任务和宏任务"></a>微任务和宏任务</h3><ol>
+<li>宏任务<br>宏任务指的就是浏览器中一些独立的工作单元，主要有：</li>
+</ol>
+<ul>
+<li>执行主线（全局） JavaScript 代码</li>
+<li>setTimeout()、setInterval()</li>
+<li>UI 交互事件  </li>
+<li>postMessage</li>
+<li>网络请求</li>
+<li>I&#x2F;O 操作</li>
+<li>…</li>
+<li>node 中的 setImmediate()</li>
+</ul>
+<ol start="2">
+<li>微任务<br>微任务指的是更小的、实时性较高的任务，用于更新网页应用的状态，需要尽可能快的、通过异步方式执行。微任务使得我们能够在UI渲染之前执行一些操作，避免不必要的UI重绘。</li>
+</ol>
+<ul>
+<li>Promise的回调then()</li>
+<li>监听 Dom 变化的 mutationObsever</li>
+<li>node 中的 process.nextTick</li>
+</ul>
+<blockquote>
+<p>事件循环的实现至少应该有一个用于宏任务的队列和一个用于微任务的队列。但是由于市面上的浏览器和JavaScript执行环境种类很多，因此具体实现也不太一致。</p>
+</blockquote>
+<h2 id="3-事件循环过程"><a href="#3-事件循环过程" class="headerlink" title="3. 事件循环过程"></a>3. 事件循环过程</h2><p><img src="https://i.loli.net/2021/11/04/o2Jq5YCjldsmDQg.jpg" alt="事件循环过程"></p>
+<blockquote>
+<p>注意：单次事件循环中，最多处理一个宏任务（其余的在任务队列中等待），而微任务队列中的微任务都会被处理。可以理解为一个宏任务绑定着一个微任务队列。</p>
+</blockquote>
+<ol>
+<li>首先执行全局 JavaScript 代码（第一个宏任务），遇到宏任务就推入任务队列（即宏任务队列），遇到微任务就推入微任务队列；</li>
+<li>当执行完当前的一项宏任务后，查询是否有微任务需要执行；</li>
+<li>有则清空微任务队列，按顺序执行微任务，否则直接跳到下一步；</li>
+<li>当执行完所有任务后，如有必要会进行 UI 渲染，至此一轮 Event Loop 结束；</li>
+<li>然后进行下一轮 Event Loop，从任务队列中的第一项宏任务开始执行；</li>
+</ol>
+<h2 id="4-事件循环中的误区"><a href="#4-事件循环中的误区" class="headerlink" title="4. 事件循环中的误区"></a>4. 事件循环中的误区</h2><blockquote>
+<p>上面所说的遇到宏任务就推入任务队列其实并不严谨，对于异步任务（如事件处理函数、定时器任务）来说，它们并不是直接将回调推入宏任务队列，而是先将任务交给对应的线程进行管理，等到一定时刻才将回调推入任务队列。</p>
+</blockquote>
+<ul>
+<li>当事件监听器被注册后，会由事件触发线程进行管理，一旦监听的事件被触发，才将回调函数推入任务队列。</li>
+<li>定时器任务也是如此，设置一个定时器后，它会由定时器触发线程管理，等到定时结束，才将回调函数推入任务队列。这也就可以解释定时器为什么不准了，因为过了设定的延迟时间之后，回调只是被推入任务队列，需要等待前面的任务执行完毕才能执行，并没有立即执行。</li>
+</ul>
+<h2 id="5-事件循环巩固"><a href="#5-事件循环巩固" class="headerlink" title="5. 事件循环巩固"></a>5. 事件循环巩固</h2><p>理解上述概念之后，不妨试一试事件循环相关的代码输出题。<br><a class="link"   target="_blank" rel="noopener" href="https://juejin.cn/post/6959043611161952269" >事件循环相关代码输出题<i class="fas fa-external-link-alt"></i></a><br><a class="link"   target="_blank" rel="noopener" href="http://latentflip.com/loupe/" >在线事件循环过程可视化工具<i class="fas fa-external-link-alt"></i></a></p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/426a3bf11f404821abb636690119621b~tplv-k3u1fbpfcp-watermark.awebp" alt="事件循环代码执行"></p>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/JS/">#JS</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/">#浏览器</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">#事件循环</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/07/13/2021-07-13-%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E6%96%B9%E6%A1%88/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">异步编程方案</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/06/23/2021-06-23-Vue2%E9%9D%A2%E8%AF%95%E9%A2%98/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Vue2面试题</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;Comments</i>
+    </div>
+    
+
+        
+            
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Eli</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
+</body>
+</html>
